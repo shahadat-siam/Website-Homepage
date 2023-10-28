@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    box-shadow: 5px 5px 10px rgba(4, 5, 66, 0.5);
+}
+header{
+    display: block;
+     
+}
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+     
+
+}
+.navbar span{
+    color: #756c16;
+    border: none;
+    background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+    box-shadow: 0 5px 5px   rgba(4, 5, 66, 0.5);
+}
+.navbar .logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8em;
+}
+.navbar .links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+.navbar .links a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    transition: 0.4s ease;
+}
+.navbar .links a:hover{
+    color: #47b2e4;
+}
+.navbar .button a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 15px 0;
+    transition: 0.4s ease;
+}
+.navbar .button a:not(:last-child) {
+    margin-right: 30px;
+  }
+
+.navbar .button .signin:hover{
+    color: #47b2e4;
+}
+ 
+.navbar .button .signup{
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    text-align: center;
+    transition: 0.4s ease;
+    border-radius: 4px;
+}
+.navbar .button .signup:hover{
+    background: #47b2e4;
+    color: #fff;
+}
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+    height: 95vh;
+} 
+.hero-section .hero{
+    max-width: 50%;
+    color: #fff;
+}
+.hero h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: orange;
+}
+.hero p{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #c9c7c7;
+}
+.hero-section .img img{
+    width: 517px;
+}
+.hero-section .button{
+    margin-top:40px;
+}
+.hero-section .button a{
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 0.375rem;
+    transition: 0.3s ease;
+}
+.hero-section .button a:not(:last-child) {
+    margin-right: 15px;
+  }
+.button .join{
+    background-color: #47b2e4;
+}
+.hero-section .button .learn{
+    border: 1px solid #fff;
+    border-radius: 0.375rem;
+}
+.hero-section .button a:hover{
+    background-color: #47b2e4;
+}
+#menu-toggle{
+    display: none;
+}
+#hamburger-btn{
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    order: 1;
+    display: none;
+}
+
+@media screen and (max-width:1023px){
+    .navbar .logo a{
+        font-size:1.5rem ;
+    }
+    .links{
+        position: fixed;
+        left: -100%;
+        top: 75px;
+        width: 100%;
+        height: 100vh;
+        padding-top: 50px;
+        flex-direction: column;
+        background: #175d69;
+        transition: 0.3s ease;
+    }
+    .navbar #menu-toggle:checked ~ .links    {
+        left: 0;
+    }
+    .navbar #hamburger-btn{
+        display: block;
+    }
+    .hero-section .hero{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .header .button{
+        display: none;
+    }
+    .hero-section img{
+        display: none;
+    }
+}
